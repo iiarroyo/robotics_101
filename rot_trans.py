@@ -1,9 +1,14 @@
 """
-Programming Assignment Rotations and Translations 
-
-Alumno: Israel Ivan Arroyo Parada
-Matricula: A01706190
-Profesor: Jesus Arturo Escobedo
+Actividad:
+    Programming Assignment Rotations and Translations 
+Video:
+    https://youtu.be/cMWbo0xkxno
+Alumno: 
+    Israel Ivan Arroyo Parada
+Matricula:
+    A01706190
+Profesor: 
+    Jesus Arturo Escobedo
 """
 import math as math
 import numpy as np
@@ -75,7 +80,7 @@ def main():
     print("  {0}{1}".format(my_rotz(math.pi/2), endl))
 
     print("my_transl(2,3,4)")
-    print("  {0}{1}".formatmy_transl(2,3,4), endl))
+    print("  {0}{1}".format(my_transl(2,3,4), endl))
 
 
 if __name__ == '__main__':
