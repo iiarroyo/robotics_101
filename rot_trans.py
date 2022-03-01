@@ -18,11 +18,13 @@ def my_rotx(theta):
     """
     Write a function called my_rotx(theta) that takes as input the angle
     theta in radians and computes the fundamental rotation matrix around
-    the x-axis.(It should give as result a 3x3 matrix). 
+    the x-axis.(It should give as result a 3x3 matrix).
+    :input: degrees
     """
+    rad = math.radians(theta) 
     res = np.matrix([[1,         0,                         0],
-                     [0,    math.cos(theta), -math.sin(theta)],
-                     [0,    math.sin(theta), math.cos(theta)]])
+                     [0,    math.cos(rad), -math.sin(rad)],
+                     [0,    math.sin(rad), math.cos(rad)]])
     return res
 
 
@@ -31,10 +33,12 @@ def my_roty(theta):
     Write a function called my_roty(theta) that takes as input the angle
     theta in radians and computes the fundamental rotation matrix around
     the y-axis. (It should give as result a 3x3 matrix).
+    :input: degrees
     """
-    res = np.matrix([[math.cos(theta),   0,       math.sin(theta)],
-                     [0,                 1,       0              ],
-                     [-math.sin(theta),  0,       math.cos(theta)]])
+    rad = math.radians(theta) 
+    res = np.matrix([[math.cos(rad),   0,       math.sin(rad)],
+                     [0,                 1,       0           ],
+                     [-math.sin(rad),  0,       math.cos(rad)]])
     return res
 
 
@@ -42,10 +46,12 @@ def my_rotz(theta):
     """
     Write a function called my_rotz(theta) that takes as input the angle
     theta in radians and computes the fundamental rotation matrix around
-    the z-axis. (It should give as result a 3x3 matrix). 
+    the z-axis. (It should give as result a 3x3 matrix).
+    :input: degrees
     """
-    res = np.matrix([[math.cos(theta), -math.sin(theta), 0],
-                     [math.sin(theta), math.cos(theta),  0],
+    rad = math.radians(theta) 
+    res = np.matrix([[math.cos(rad), -math.sin(rad), 0],
+                     [math.sin(rad), math.cos(rad),  0],
                      [0,               0,                1]])
     return res
  
@@ -70,18 +76,20 @@ def my_transl(x,y,z):
 
 
 def main():
-    print("my_rotx(pi/4)")
-    print("  {0}{1}".format(my_rotx(math.pi/4), endl))
+    # print("my_rotx(pi/4)")
+    # print("  {0}{1}".format(my_rotx(rad), endl))
 
-    print("my_roty(-pi/4)")  # (notice the minus sign)
-    print("  {0}{1}".format(my_roty(-math.pi/4), endl))
+    # print("my_roty(-pi/4)")  # (notice the minus sign)
+    # print("  {0}{1}".format(my_roty(rad), endl))
+    # print("my_rotz(pi/2)") 
+    # print("  {0}{1}".format(my_rotz(rad), endl))
 
-    print("my_rotz(pi/2)") 
-    print("  {0}{1}".format(my_rotz(math.pi/2), endl))
-
-    print("my_transl(2,3,4)")
-    print("  {0}{1}".format(my_transl(2,3,4), endl))
-
+    # print("my_transl(2,3,4)")
+    # print("  {0}{1}".format(my_transl(2,3,4), endl))
+    roty=my_roty(35)
+    rotx = my_rotx(90)
+    rotz=my_rotz(90)
+    print(rotx*rotz)
 
 if __name__ == '__main__':
     main()
