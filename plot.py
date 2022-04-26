@@ -17,7 +17,6 @@ def two_dof_plot2(q1, q2, l1, l2):
     # points = np.matrix([[0, 0], [x1, y1], [x2, y2]])
     # print(x2, y2)
     # plt.plot(points[:,0], points[:,1])
-    %matplotlib qt
     zline = np.linspace(0, 15, 1000)
     xline = np.sin(zline)
     yline = np.cos(zline)
